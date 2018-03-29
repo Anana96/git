@@ -1,0 +1,43 @@
+﻿@model EnglishVideo.Models.Word
+
+@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+<link href="http://vjs.zencdn.net/6.6.3/video-js.css" rel="stylesheet">
+@*<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>*@
+<h1>hii</h1>
+
+<video id="my-video" class="video-js" controls="controls" poster="~/Content/Images/Posters/Harry1.jpg" preload="auto" data-setup="{}">
+    <source src="~/Content/Video/Harry1.mkv" type='video/x-matroska'>
+    <source src="~/Content/Video/Harry1.mp4" type="video/mp4"> <!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
+    <source src="~/Content/Video/Harry1.webm" type="video/webm"> <!-- WebM/VP8 для Firefox4, Opera, и Chrome -->
+    <track kind="subtitles" srclang="en" src="~/Content/Subtitles/Harry1.vtt" default label="English">
+</video>
+
+<div id="display">
+</div>
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead" onmouseover="ChangeOver(this)" ">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+
+@using (Html.BeginForm("GetWord", "Home", FormMethod.Post))
+{
+    @Html.LabelFor(model => model.English, htmlAttributes: new { @class = "control-label col-md-2" })
+    @Html.EditorFor(model => model.English, new { htmlAttributes = new { @class = "form-control" } })
+    <br />
+    @Html.LabelFor(model => model.NameVideo, htmlAttributes: new { @class = "control-label col-md-2" })
+    @Html.EditorFor(model => model.NameVideo, new { htmlAttributes = new { @class = "form-control" } })
+    <br />
+    @Html.LabelFor(model => model.Russia, htmlAttributes: new { @class = "control-label col-md-2" })
+    @Html.EditorFor(model => model.Russia, new { htmlAttributes = new { @class = "form-control" } })
+
+    <input type="submit" value="Отправить" />
+}
+
+<script src="~/Scripts/subtitle.js"></script>
+<script src="http://vjs.zencdn.net/6.6.3/video.js"></script>
