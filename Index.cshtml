@@ -4,11 +4,10 @@
     ViewBag.Title = "Home Page";
     Layout = null;
 }
-<link href="http://vjs.zencdn.net/6.6.3/video-js.css" rel="stylesheet">
-@*<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>*@
+
 <h1>hii</h1>
 
-<video id="my-video" class="video-js" controls="controls" poster="~/Content/Images/Posters/Harry1.jpg" preload="auto" data-setup="{}">
+<video controls="controls" poster="~/Content/Images/Posters/Harry1.jpg" preload="auto">
     <source src="~/Content/Video/Harry1.mkv" type='video/x-matroska'>
     <source src="~/Content/Video/Harry1.mp4" type="video/mp4"> <!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
     <source src="~/Content/Video/Harry1.webm" type="video/webm"> <!-- WebM/VP8 для Firefox4, Opera, и Chrome -->
@@ -16,11 +15,14 @@
 </video>
 
 <div id="display">
+    <span id="subt"></span>
+    <p  @*onmouseover="ChangeOver(this)*@ ">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
 </div>
+
 
 <div class="jumbotron">
     <h1>ASP.NET</h1>
-    <p class="lead" onmouseover="ChangeOver(this)" ">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
@@ -37,7 +39,12 @@
     @Html.EditorFor(model => model.Russia, new { htmlAttributes = new { @class = "form-control" } })
 
     <input type="submit" value="Отправить" />
-}
 
+
+
+
+    <a href=" #"><img src="~/Content/Images/Posters/Harry1.jpg" width="200" /></a>
+}
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
 <script src="~/Scripts/subtitle.js"></script>
-<script src="http://vjs.zencdn.net/6.6.3/video.js"></script>
+
