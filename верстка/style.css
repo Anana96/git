@@ -1,0 +1,83 @@
+ @import url(http://meyerweb.com/eric/tools/css/reset/reset.css); 
+ @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Open+Sans+Condensed:300');
+	
+
+ body{
+ background: #f8d3d3 url("back.jpg") 100% 100% no-repeat; /* Добавляем фон */
+ background-size: cover;
+ font-family: 'Open Sans Condensed', sans-serif;
+ font-size:30px;
+ color:white;
+ -webkit-font-smoothing:antialiased;
+ -webkit-overflow-scrolling:touch;
+ }
+
+
+
+.cont{
+    background:#a5b9cf;
+    height: 900px;
+  
+}
+
+
+.head{
+    height: 180px;
+    background-color: rgba(110, 103, 103, 0.938);
+}
+
+ .centered{
+ 	text-align: center;
+ }
+
+ .foot{
+     padding: 30px 0;
+     background-color: rgba(110, 103, 103, 0.938);
+ }
+
+ul{
+    box-shadow: 40;
+}
+
+ li {
+    display: inline;
+    text-align: center;
+    background:#40667c;
+    font-size:23px;
+    padding: 20px 0;
+    box-shadow: 1px 3px 3px -3px #000000 inset;
+  
+} 
+
+li:hover{
+    font-size: 25px;
+    transition: all 0.4s ease 0s;
+    box-shadow: -7px 13px 35px 1px rgba(0,0,0,0.42);
+}
+
+li a{
+  text-decoration: none;
+  color:white;
+}
+
+a:hover{
+    text-decoration: none;
+    color:white;
+   
+ 
+}
+
+.active{
+
+    background:#c47a70;
+}
+footer{
+    font-family: 'Amatic SC';
+    font-size: 25px;
+    color: #0c3149;
+}
+
+footer img{
+    height: 20px;
+
+}
